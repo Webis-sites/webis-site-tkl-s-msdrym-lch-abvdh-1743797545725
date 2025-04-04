@@ -19,6 +19,8 @@
   --toggle-height: 60px;
   --toggle-radius: 30px;
   --animation-duration: 0.5s;
+
+  --accordion-animation-speed: 0.3s;
 }
 
 body {
