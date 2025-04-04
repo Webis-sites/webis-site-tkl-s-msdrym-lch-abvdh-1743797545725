@@ -23,6 +23,8 @@
   --accordion-animation-speed: 0.3s;
 
   --rtl-direction: rtl;
+
+  --dir-rtl: rtl;
 }
 
 body {
