@@ -10,6 +10,8 @@
   --secondary-color: #ffffff;
 
   --primary-dark: #00b8d9;
+
+  --animation-speed: 0.3s;
 }
 
 body {
