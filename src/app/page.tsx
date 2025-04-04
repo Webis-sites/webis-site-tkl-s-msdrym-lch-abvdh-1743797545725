@@ -7,6 +7,7 @@ import AboutUsSection from '../components/AboutUsSection';
 import ServicesSection from '../components/ServicesSection';
 import ProcessSection from '../components/ProcessSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import EmployersCandidatesToggle from '../components/EmployersCandidatesToggle';
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
     <ServicesSection />
     <ProcessSection />
     <TestimonialsSection />
+    <EmployersCandidatesToggle />
   </main>
       
       <footer className="py-6 bg-gray-100 dark:bg-gray-800">
