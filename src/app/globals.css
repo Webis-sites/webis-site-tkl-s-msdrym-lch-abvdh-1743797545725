@@ -15,6 +15,10 @@
 
   --process-timeline-width: 1px;
   --process-step-transition: 0.3s ease-in-out;
+
+  --toggle-height: 60px;
+  --toggle-radius: 30px;
+  --animation-duration: 0.5s;
 }
 
 body {
