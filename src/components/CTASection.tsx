@@ -39,7 +39,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   };
 
   return (
-    <section className="relative overflow-hidden bg-primary text-white py-16 px-4 md:px-8 lg:px-16 rtl w-full">
+    <section id="contact-section" className="relative overflow-hidden bg-primary text-white py-16 px-4 md:px-8 lg:px-16 rtl w-full">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -123,7 +123,12 @@ const CTASection: React.FC<CTASectionProps> = ({
                 viewport={{ once: true }}
               >
                 <button 
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact-section');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                   className="bg-white text-primary hover:bg-opacity-90 text-lg font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center gap-2 group"
                 >
                   {buttonText}

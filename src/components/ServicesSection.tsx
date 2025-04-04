@@ -74,7 +74,7 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50 rtl w-full" dir="rtl">
+    <section id="services-section" className="py-16 bg-gray-50 rtl w-full" dir="rtl">
       <div className="w-full px-4">
         <div className="text-center mb-12 max-w-7xl mx-auto">
           <motion.h2 
@@ -123,7 +123,15 @@ const ServicesSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <button className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button 
+            onClick={() => {
+              const contactSection = document.getElementById('contact-section');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
             צור קשר עכשיו
           </button>
         </motion.div>

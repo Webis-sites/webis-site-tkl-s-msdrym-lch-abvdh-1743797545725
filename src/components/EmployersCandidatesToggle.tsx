@@ -177,7 +177,12 @@ const EmployersCandidatesToggle: React.FC = () => {
                     className="flex justify-center mt-8"
                   >
                     <button 
-                      onClick={() => window.location.href = '/contact-employers'}
+                      onClick={() => {
+                        const contactSection = document.getElementById('contact-section');
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                       className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                     >
                       דברו איתנו על צרכי הגיוס שלכם
@@ -214,8 +219,8 @@ const EmployersCandidatesToggle: React.FC = () => {
                     className="flex justify-center mt-8"
                   >
                     <button 
-                      onClick={() => window.location.href = '/submit-cv'}
-                      className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                      disabled
+                      className="bg-primary bg-opacity-70 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 cursor-not-allowed"
                     >
                       הגישו קורות חיים עכשיו
                     </button>

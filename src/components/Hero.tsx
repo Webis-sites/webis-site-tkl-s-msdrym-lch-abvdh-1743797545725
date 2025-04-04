@@ -24,13 +24,23 @@ export default function Hero({ title, subtitle }: HeroProps) {
           </div>
           <div className="space-x-4">
             <button 
-              onClick={() => window.location.href = '/services'}
+              onClick={() => {
+                const servicesSection = document.getElementById('services-section');
+                if (servicesSection) {
+                  servicesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 dark:bg-primary dark:text-gray-900 dark:hover:bg-primary/90"
             >
               לפרטים נוספים
             </button>
             <button 
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => {
+                const contactSection = document.getElementById('contact-section');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               צור קשר

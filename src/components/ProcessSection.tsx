@@ -142,7 +142,12 @@ const ProcessSection: React.FC = () => {
 
         <div className="text-center mt-8">
           <button 
-            onClick={() => window.location.href = '/start-process'}
+            onClick={() => {
+              const contactSection = document.getElementById('contact-section');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             בואו נתחיל את התהליך

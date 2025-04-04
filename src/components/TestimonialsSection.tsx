@@ -212,7 +212,12 @@ const TestimonialsSection: React.FC = () => {
         <div className="mt-12 text-center">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">גם אתם רוצים להצליח?</h3>
           <button 
-            onClick={() => window.location.href = '/contact'}
+            onClick={() => {
+              const contactSection = document.getElementById('contact-section');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="bg-primary hover:bg-primary-dark text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none"
           >
             דברו איתנו עכשיו
