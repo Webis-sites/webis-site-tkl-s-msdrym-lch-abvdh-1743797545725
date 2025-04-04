@@ -86,7 +86,7 @@ const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50 text-right w-full" dir="rtl">
+    <section id="process-section" className="py-16 bg-gray-50 text-right w-full" dir="rtl">
       <div className="w-full px-4">
         <div className="text-center mb-12 max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">איך תכל׳ס עובדת?</h2>

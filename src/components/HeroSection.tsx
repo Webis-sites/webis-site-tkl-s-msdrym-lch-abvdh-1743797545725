@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-white text-right overflow-hidden w-full" dir="rtl">
+    <section id="hero-section" className="relative bg-white text-right overflow-hidden w-full" dir="rtl">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-primary/30 to-transparent" />

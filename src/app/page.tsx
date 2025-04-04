@@ -11,10 +11,13 @@ import EmployersCandidatesToggle from '../components/EmployersCandidatesToggle';
 import FAQSection from '../components/FAQSection';
 import CTASection from '../components/CTASection';
 import FooterSection from '../components/FooterSection';
+import Navbar from '../components/Navbar';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col w-full">
+      <Navbar />
       <main className="flex-1 w-full">
         {/* כאן יתווספו הקומפוננטות שייווצרו על ידי המחולל */}
         <HeroSection />
@@ -33,6 +36,7 @@ export default function HomePage() {
           &copy; 2025 תכל׳ס מסדרים לך עבודה. כל הזכויות שמורות.
         </div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 }

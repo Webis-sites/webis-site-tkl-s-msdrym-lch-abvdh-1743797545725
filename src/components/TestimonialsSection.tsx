@@ -106,7 +106,7 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16 rtl w-full" dir="rtl">
+    <section id="testimonials-section" className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16 rtl w-full" dir="rtl">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">הסיפורים האמיתיים מאחורי ההצלחות שלנו</h2>

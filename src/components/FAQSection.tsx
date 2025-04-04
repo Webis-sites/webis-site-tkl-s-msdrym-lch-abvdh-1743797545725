@@ -44,7 +44,7 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-white text-right w-full" dir="rtl">
+    <section id="faq-section" className="py-16 px-4 md:px-8 bg-white text-right w-full" dir="rtl">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">שאלות נפוצות</h2>
         <p className="text-lg text-gray-600 mb-10">

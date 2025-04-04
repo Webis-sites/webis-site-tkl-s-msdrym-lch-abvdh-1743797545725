@@ -103,7 +103,7 @@ const EmployersCandidatesToggle: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full py-16 bg-white" dir="rtl">
+    <section id="services-toggle-section" className="w-full py-16 bg-white" dir="rtl">
       <div className="w-full px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">תכל׳ס מסדרים לך עבודה</h2>
