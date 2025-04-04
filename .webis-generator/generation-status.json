@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-04-04T20:16:25.158Z",
+  "timestamp": "2025-04-04T20:17:09.617Z",
   "status": {
     "totalComponents": 9,
-    "completedComponents": 5,
+    "completedComponents": 6,
     "failedComponents": 0,
-    "progress": 56
+    "progress": 67
   },
   "components": [
     {
@@ -40,7 +40,7 @@
     {
       "name": "EmployersCandidatesToggle",
       "type": "toggle",
-      "status": "pending",
+      "status": "completed",
       "description": "Interactive section with toggle between information for employers and job seekers"
     },
     {
