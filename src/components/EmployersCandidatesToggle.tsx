@@ -176,7 +176,10 @@ const EmployersCandidatesToggle: React.FC = () => {
                     variants={itemVariants}
                     className="flex justify-center mt-8"
                   >
-                    <button className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button 
+                      onClick={() => window.location.href = '/contact-employers'}
+                      className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    >
                       דברו איתנו על צרכי הגיוס שלכם
                     </button>
                   </motion.div>
@@ -210,7 +213,10 @@ const EmployersCandidatesToggle: React.FC = () => {
                     variants={itemVariants}
                     className="flex justify-center mt-8"
                   >
-                    <button className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button 
+                      onClick={() => window.location.href = '/submit-cv'}
+                      className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    >
                       הגישו קורות חיים עכשיו
                     </button>
                   </motion.div>

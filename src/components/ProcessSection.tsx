@@ -141,7 +141,10 @@ const ProcessSection: React.FC = () => {
         </motion.div>
 
         <div className="text-center mt-8">
-          <button className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <button 
+            onClick={() => window.location.href = '/start-process'}
+            className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
             בואו נתחיל את התהליך
           </button>
         </div>

@@ -131,8 +131,8 @@ const TestimonialsSection: React.FC = () => {
             />
           </div>
           
-          <div className="relative z-10 h-[400px] md:h-[350px] overflow-hidden">
-            <AnimatePresence initial={false} custom={direction}>
+          <div className="relative z-10 min-h-[450px] sm:min-h-[400px] md:min-h-[350px] overflow-hidden px-4 sm:px-6">
+            <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={currentIndex}
                 custom={direction}
@@ -144,31 +144,31 @@ const TestimonialsSection: React.FC = () => {
                   x: { type: "spring", stiffness: 300, damping: 30 },
                   opacity: { duration: 0.2 }
                 }}
-                className="absolute w-full h-full flex flex-col md:flex-row items-center justify-center p-6 md:p-10"
+                className="absolute w-full h-full flex flex-col md:flex-row items-center justify-center p-4 sm:p-6 md:p-10"
               >
-                <div className="mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                <div className="mb-6 md:mb-0 md:ml-8 flex-shrink-0">
                   <div className="relative">
-                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary relative">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary relative mx-auto md:mx-0">
                       <Image 
                         src={testimonials[currentIndex].avatarUrl}
                         alt={testimonials[currentIndex].name}
                         fill
                         style={{ objectFit: 'cover' }}
-                        sizes="(max-width: 768px) 96px, 128px"
+                        sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 128px"
                       />
                     </div>
                     <div className="absolute -bottom-2 -left-2 bg-primary text-white p-2 rounded-full">
-                      <FaQuoteRight className="text-xl" />
+                      <FaQuoteRight className="text-sm sm:text-xl" />
                     </div>
                   </div>
                 </div>
                 
                 <div className="flex-1 text-center md:text-right">
-                  <p className="text-lg md:text-xl font-medium mb-6 text-gray-700 leading-relaxed">
+                  <p className="text-md sm:text-lg md:text-xl font-medium mb-4 md:mb-6 text-gray-700 leading-relaxed">
                     "{testimonials[currentIndex].quote}"
                   </p>
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900">{testimonials[currentIndex].name}</h4>
+                    <h4 className="text-lg sm:text-xl font-bold text-gray-900">{testimonials[currentIndex].name}</h4>
                     <p className="text-primary font-medium">{testimonials[currentIndex].position}</p>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ const TestimonialsSection: React.FC = () => {
                   setDirection(index > currentIndex ? 1 : -1);
                   setCurrentIndex(index);
                 }}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex ? 'bg-primary scale-125' : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
@@ -194,24 +194,27 @@ const TestimonialsSection: React.FC = () => {
 
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-primary hover:bg-primary hover:text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white text-primary hover:bg-primary hover:text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none z-20"
             aria-label="Previous testimonial"
           >
-            <FaChevronLeft className="text-xl" />
+            <FaChevronLeft className="text-sm sm:text-lg md:text-xl" />
           </button>
 
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-primary hover:bg-primary hover:text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white text-primary hover:bg-primary hover:text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none z-20"
             aria-label="Next testimonial"
           >
-            <FaChevronRight className="text-xl" />
+            <FaChevronRight className="text-sm sm:text-lg md:text-xl" />
           </button>
         </div>
 
         <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">גם אתם רוצים להצליח?</h3>
-          <button className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">גם אתם רוצים להצליח?</h3>
+          <button 
+            onClick={() => window.location.href = '/contact'}
+            className="bg-primary hover:bg-primary-dark text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none"
+          >
             דברו איתנו עכשיו
           </button>
         </div>

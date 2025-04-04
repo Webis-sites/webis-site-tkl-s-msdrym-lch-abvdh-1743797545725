@@ -123,6 +123,7 @@ const CTASection: React.FC<CTASectionProps> = ({
                 viewport={{ once: true }}
               >
                 <button 
+                  onClick={() => window.location.href = '/contact'}
                   className="bg-white text-primary hover:bg-opacity-90 text-lg font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center gap-2 group"
                 >
                   {buttonText}
@@ -199,6 +200,7 @@ const CTASection: React.FC<CTASectionProps> = ({
                   className="w-full bg-white text-primary hover:bg-opacity-90 font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={(e) => handleSubmit(e)}
                 >
                   <span>שליחה</span>
                   <FaPaperPlane />

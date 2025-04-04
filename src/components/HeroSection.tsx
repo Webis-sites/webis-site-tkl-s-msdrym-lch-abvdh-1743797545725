@@ -172,6 +172,7 @@ const HeroSection: React.FC = () => {
 
                 <button
                   type="submit"
+                  onClick={(e) => handleSubmit(e)}
                   className="w-full py-4 px-6 bg-primary text-white font-bold rounded-lg transition-all hover:bg-primary-dark hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 >
                   השאירו פרטים ונתחיל לזוז – תכלס
