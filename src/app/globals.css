@@ -8,6 +8,8 @@
   --background-end-rgb: 255, 255, 255;
   --primary-color: #0fd7ff;
   --secondary-color: #ffffff;
+
+  --primary-dark: #00b8d9;
 }
 
 body {
