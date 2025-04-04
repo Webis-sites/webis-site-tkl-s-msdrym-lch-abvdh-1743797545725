@@ -20,19 +20,26 @@ const FooterSection: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-10 dir-rtl" dir="rtl">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-900 text-white py-10 dir-rtl w-full" dir="rtl">
+      <div className="w-full px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Logo and Tagline */}
           <div className="flex flex-col items-start">
-            <div className="mb-4">
-              <Image 
-                src="/logo.png" 
-                alt="תכל׳ס מסדרים לך עבודה" 
-                width={150} 
-                height={50}
-                className="h-auto"
-              />
+            <div className="mb-4 relative w-[150px] h-[50px]">
+              <Link href="/">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden relative mr-2">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                      alt="תכל׳ס לוגו" 
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="40px"
+                    />
+                  </div>
+                  <span className="text-primary font-bold text-2xl">תכל׳ס</span>
+                </div>
+              </Link>
             </div>
             <p className="text-gray-300 mt-2 text-sm">
               תכל׳ס מסדרים לך עבודה - בלי סיבובים, בלי הבטחות. פשוט עבודה.
@@ -96,7 +103,7 @@ const FooterSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm max-w-7xl mx-auto">
           <p>© {currentYear} תכל׳ס מסדרים לך עבודה. כל הזכויות שמורות.</p>
         </div>
       </div>

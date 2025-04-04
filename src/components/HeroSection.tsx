@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { FaUser, FaPhone, FaEnvelope, FaBriefcase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface FormData {
   name: string;
@@ -41,7 +42,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-white text-right overflow-hidden" dir="rtl">
+    <section className="relative bg-white text-right overflow-hidden w-full" dir="rtl">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-primary/30 to-transparent" />
@@ -55,8 +56,8 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+      <div className="w-full px-4 py-16 md:py-24 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto">
           {/* Content Side */}
           <div className="w-full lg:w-1/2 space-y-8">
             <motion.h1 
@@ -79,22 +80,23 @@ const HeroSection: React.FC = () => {
               תכל'ס - אנחנו פה כדי לסדר לך עבודה.
             </motion.p>
 
-            {/* Visual Element */}
+            {/* Visual Element - Replace with Unsplash Image */}
             <motion.div 
-              className="hidden md:block"
+              className="relative h-60 w-full overflow-hidden rounded-lg shadow-lg"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className="relative h-24 w-full">
-                <div className="absolute top-0 right-0 h-4 w-4 bg-primary rounded-full" />
-                <div className="absolute top-8 right-12 h-6 w-6 bg-primary rounded-full" />
-                <div className="absolute top-16 right-24 h-8 w-8 bg-primary rounded-full" />
-                <div className="absolute top-4 right-40 h-5 w-5 bg-primary rounded-full" />
-                <div className="absolute top-12 right-56 h-7 w-7 bg-primary rounded-full" />
-                <div className="absolute top-2 right-72 h-4 w-4 bg-primary rounded-full" />
-                <div className="h-1 bg-primary/50 absolute top-12 right-0 w-3/4 rounded-full" />
-              </div>
+              <Image
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="אנשי עסקים בפגישה"
+                fill
+                style={{ objectFit: 'cover' }}
+                className="rounded-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-primary/10 rounded-lg"></div>
             </motion.div>
           </div>
 

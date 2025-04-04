@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaPaperPlane } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface CTASectionProps {
   title?: string;
@@ -38,7 +39,19 @@ const CTASection: React.FC<CTASectionProps> = ({
   };
 
   return (
-    <section className="relative overflow-hidden bg-primary text-white py-16 px-4 md:px-8 lg:px-16 rtl">
+    <section className="relative overflow-hidden bg-primary text-white py-16 px-4 md:px-8 lg:px-16 rtl w-full">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          alt="רקע CTA"
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="100vw"
+          className="opacity-20"
+        />
+      </div>
+      
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <motion.div 
@@ -79,8 +92,8 @@ const CTASection: React.FC<CTASectionProps> = ({
         />
       </div>
 
-      <div className="container mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="w-full relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-7xl mx-auto">
           <div className="w-full lg:w-1/2 text-right">
             <motion.h2 
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"

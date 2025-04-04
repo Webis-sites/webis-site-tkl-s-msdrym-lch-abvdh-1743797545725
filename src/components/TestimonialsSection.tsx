@@ -3,13 +3,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronRight, FaChevronLeft, FaQuoteRight } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface Testimonial {
   id: number;
   quote: string;
   name: string;
   position: string;
-  avatarUrl?: string;
+  avatarUrl: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -18,28 +19,28 @@ const testimonials: Testimonial[] = [
     quote: "תכל'ס שינתה את חיי המקצועיים. תוך שבועיים מצאתי עבודה בחברת הייטק מובילה עם תנאים מעולים.",
     name: "יעל כהן",
     position: "מפתחת Full Stack",
-    avatarUrl: "/avatars/avatar-1.jpg"
+    avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: 2,
     quote: "כמעסיק, תכל'ס חסכה לי זמן יקר בתהליך הגיוס. המועמדים שקיבלתי היו מדויקים לצרכים שלנו והשתלבו מצוין בצוות.",
     name: "אלון לוי",
     position: "מנכ\"ל, חברת סייבר",
-    avatarUrl: "/avatars/avatar-2.jpg"
+    avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: 3,
     quote: "השירות המקצועי והאישי שקיבלתי מתכל'ס היה יוצא מן הכלל. הם באמת מבינים את שוק העבודה ויודעים לחבר בין אנשים לבין ההזדמנות המושלמת.",
     name: "מיכל אברהם",
     position: "מנהלת משאבי אנוש",
-    avatarUrl: "/avatars/avatar-3.jpg"
+    avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: 4,
     quote: "אחרי חודשים של חיפוש עבודה ללא הצלחה, תכל'ס עזרו לי למצוא תפקיד שמתאים בדיוק לכישורים ולשאיפות שלי. הליווי האישי היה מעל ומעבר.",
     name: "דוד ישראלי",
     position: "מהנדס תוכנה",
-    avatarUrl: "/avatars/avatar-4.jpg"
+    avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   }
 ];
 
@@ -105,8 +106,8 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16 rtl" dir="rtl">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16 rtl w-full" dir="rtl">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">הסיפורים האמיתיים מאחורי ההצלחות שלנו</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -119,7 +120,18 @@ const TestimonialsSection: React.FC = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="relative h-[400px] md:h-[350px] overflow-hidden">
+          <div className="absolute inset-0 z-0 opacity-10">
+            <Image
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+              alt="רקע עדויות"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
+              className="opacity-25"
+            />
+          </div>
+          
+          <div className="relative z-10 h-[400px] md:h-[350px] overflow-hidden">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -136,21 +148,15 @@ const TestimonialsSection: React.FC = () => {
               >
                 <div className="mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                   <div className="relative">
-                    {testimonials[currentIndex].avatarUrl ? (
-                      <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary">
-                        <img 
-                          src={testimonials[currentIndex].avatarUrl} 
-                          alt={testimonials[currentIndex].name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gray-200 flex items-center justify-center border-4 border-primary">
-                        <span className="text-3xl font-bold text-gray-400">
-                          {testimonials[currentIndex].name.charAt(0)}
-                        </span>
-                      </div>
-                    )}
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary relative">
+                      <Image 
+                        src={testimonials[currentIndex].avatarUrl}
+                        alt={testimonials[currentIndex].name}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 768px) 96px, 128px"
+                      />
+                    </div>
                     <div className="absolute -bottom-2 -left-2 bg-primary text-white p-2 rounded-full">
                       <FaQuoteRight className="text-xl" />
                     </div>

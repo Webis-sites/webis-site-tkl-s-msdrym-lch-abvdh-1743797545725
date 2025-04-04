@@ -86,9 +86,9 @@ const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50 text-right" dir="rtl">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section className="py-16 bg-gray-50 text-right w-full" dir="rtl">
+      <div className="w-full px-4">
+        <div className="text-center mb-12 max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">איך תכל׳ס עובדת?</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             אנחנו מלווים אותך בכל שלבי תהליך הגיוס וההשמה, מהפגישה הראשונית ועד להשמה מוצלחת
@@ -96,7 +96,7 @@ const ProcessSection: React.FC = () => {
         </div>
 
         <motion.div
-          className="relative"
+          className="relative max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate={animateSteps ? "visible" : "hidden"}
