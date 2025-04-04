@@ -1,8 +1,11 @@
 {
-  "projectName": "תכל׳ס-מסדרים-לך-עבודה-7545",
-  "businessName": "תכל׳ס מסדרים לך עבודה",
-  "created": "2025-04-04T20:12:25.769Z",
-  "status": "initialized",
-  "progress": 0,
-  "components": []
+  "timestamp": "2025-04-04T20:12:50.695Z",
+  "status": {
+    "totalComponents": 0,
+    "completedComponents": 0,
+    "failedComponents": 0,
+    "progress": 0
+  },
+  "components": [],
+  "repoName": "webis-site-tkl-s-msdrym-lch-abvdh-1743797545725"
 }
