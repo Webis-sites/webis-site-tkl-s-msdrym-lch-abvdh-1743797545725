@@ -4,6 +4,7 @@ import React from 'react';
 import Hero from '@/components/Hero';
 import HeroSection from '../components/HeroSection';
 import AboutUsSection from '../components/AboutUsSection';
+import ServicesSection from '../components/ServicesSection';
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
         {/* כאן יתווספו הקומפוננטות שייווצרו על ידי המחולל */}
         <HeroSection />
     <AboutUsSection />
+    <ServicesSection />
   </main>
       
       <footer className="py-6 bg-gray-100 dark:bg-gray-800">
