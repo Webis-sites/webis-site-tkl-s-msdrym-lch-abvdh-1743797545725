@@ -15,11 +15,6 @@ import FooterSection from '../components/FooterSection';
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col w-full">
-      <Hero 
-        title="תכל׳ס מסדרים לך עבודה" 
-        subtitle="service" 
-      />
-      
       <main className="flex-1 w-full">
         {/* כאן יתווספו הקומפוננטות שייווצרו על ידי המחולל */}
         <HeroSection />
