@@ -56,7 +56,7 @@ const AboutUsSection: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 items-center mb-16 max-w-7xl mx-auto">
-          <div className="md:w-1/2 relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+          <div className="md:w-1/2 relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-xl">
             <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
               alt="צוות מקצועי בעבודה"
@@ -64,6 +64,7 @@ const AboutUsSection: React.FC = () => {
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-xl"
+              priority
             />
             <div className="absolute inset-0 bg-primary/10 rounded-xl"></div>
           </div>
