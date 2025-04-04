@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-04-04T20:17:09.617Z",
+  "timestamp": "2025-04-04T20:17:56.705Z",
   "status": {
     "totalComponents": 9,
-    "completedComponents": 6,
+    "completedComponents": 7,
     "failedComponents": 0,
-    "progress": 67
+    "progress": 78
   },
   "components": [
     {
@@ -46,7 +46,7 @@
     {
       "name": "FAQSection",
       "type": "faq",
-      "status": "pending",
+      "status": "completed",
       "description": "Frequently asked questions with expandable answers"
     },
     {
