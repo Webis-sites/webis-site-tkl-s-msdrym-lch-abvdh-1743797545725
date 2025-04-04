@@ -20,7 +20,7 @@ const FooterSection: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-10 dir-rtl w-full" dir="rtl">
+    <footer id="footer-section" className="bg-gray-900 text-white py-10 dir-rtl w-full" dir="rtl">
       <div className="w-full px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Logo and Tagline */}
