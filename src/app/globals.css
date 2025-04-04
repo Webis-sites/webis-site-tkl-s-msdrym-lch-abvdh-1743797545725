@@ -21,6 +21,8 @@
   --animation-duration: 0.5s;
 
   --accordion-animation-speed: 0.3s;
+
+  --rtl-direction: rtl;
 }
 
 body {
