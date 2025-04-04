@@ -1,0 +1,6 @@
+# robots.txt for תכל׳ס מסדרים לך עבודה
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://תכל׳ס-מסדרים-לך-עבודה.com/sitemap.xml
