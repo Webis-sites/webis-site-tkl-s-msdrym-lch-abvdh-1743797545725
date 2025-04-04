@@ -1,11 +1,66 @@
 {
-  "timestamp": "2025-04-04T20:12:50.695Z",
+  "timestamp": "2025-04-04T20:13:20.644Z",
   "status": {
-    "totalComponents": 0,
+    "totalComponents": 9,
     "completedComponents": 0,
     "failedComponents": 0,
     "progress": 0
   },
-  "components": [],
+  "components": [
+    {
+      "name": "HeroSection",
+      "type": "hero",
+      "status": "pending",
+      "description": "Main hero section with headline, description and call to action form"
+    },
+    {
+      "name": "AboutUsSection",
+      "type": "about",
+      "status": "pending",
+      "description": "Section explaining the company's approach and values"
+    },
+    {
+      "name": "ServicesSection",
+      "type": "services",
+      "status": "pending",
+      "description": "Section showcasing the company's recruitment and staffing services"
+    },
+    {
+      "name": "ProcessSection",
+      "type": "process",
+      "status": "pending",
+      "description": "Step-by-step visualization of how the recruitment process works"
+    },
+    {
+      "name": "TestimonialsSection",
+      "type": "testimonials",
+      "status": "pending",
+      "description": "Carousel of client testimonials and success stories"
+    },
+    {
+      "name": "EmployersCandidatesToggle",
+      "type": "toggle",
+      "status": "pending",
+      "description": "Interactive section with toggle between information for employers and job seekers"
+    },
+    {
+      "name": "FAQSection",
+      "type": "faq",
+      "status": "pending",
+      "description": "Frequently asked questions with expandable answers"
+    },
+    {
+      "name": "CTASection",
+      "type": "cta",
+      "status": "pending",
+      "description": "Final call to action section before footer"
+    },
+    {
+      "name": "FooterSection",
+      "type": "footer",
+      "status": "pending",
+      "description": "Website footer with contact information and legal details"
+    }
+  ],
   "repoName": "webis-site-tkl-s-msdrym-lch-abvdh-1743797545725"
 }
